@@ -1,0 +1,13 @@
+import os
+import PyPDF2
+
+merger = PyPDF2.PdfMerger()
+
+lista_arquivos = os.listdir("arquivos")
+lista_arquivos.sort()
+print(lista_arquivos)
+
+for arquivos in lista_arquivos:
+    if ".pdf" in arquivos:
+        merger.append("arquivos/nome_do_arquivo")
+
